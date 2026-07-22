@@ -68,7 +68,7 @@ onMounted(() => {
 
       <div
         v-if="page?.body?.toc?.links?.length"
-        class="col-span-2 not-prose"
+        class="hidden md:block md:col-span-2 not-prose"
       >
         <aside class="sticky top-8">
           <div class="font-semibold mb-2">
