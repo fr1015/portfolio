@@ -9,7 +9,19 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
+  site: {
+    url: 'http://localhost:3000',
+  },
+  sitemap: {
+    urls: [
+      '/blog'
+    ],
+    sources: [
+      '/api/__sitemap__/blog'
+    ]
+  },
   content: {
     build: {
       markdown: {
@@ -24,5 +36,12 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: '',
+  },
+    nitro: {
+    prerender: {
+      routes: [
+        '/sitemap.xml'
+      ]
+    }
   },
 })
